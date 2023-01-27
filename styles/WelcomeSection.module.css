@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: var(--color-bg);
+    background-color: var(--color-bg-white);
+    overflow: hidden;
+    position: relative;
+}
+
+.heroImage{
+    clip-path: polygon(25% 0%, 100% 0%, 73% 100%, 0% 100%);
+    width: 280px;
+	height: 280px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introText{
+    padding: 0 30px;
+    text-align: center;
+}

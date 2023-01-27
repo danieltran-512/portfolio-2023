@@ -1,0 +1,49 @@
+.container{
+    position: relative;
+    top: -1px;
+    padding-top: 120px;
+    min-width: 100vw;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    color: var(--black);
+    background-color: var(--color-bg-white);
+    margin-bottom: -1px;
+}
+
+.aboutMe{
+    position: absolute;
+    top: 50;
+    left: 50;
+}
+
+.heading{
+    color: var(--green);
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+    transform: rotate(-5deg);
+}
+
+.heroImage{
+    display: block;
+}
+
+.sectionContainer{
+    margin-top: 20vh;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 768px) {
+	.sectionContainer{
+        display: block;
+        padding: 0 30px;
+        margin-top: 5vh;
+    }
+
+    .heroImage{
+        display: none;
+    }
+}

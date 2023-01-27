@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: var(--color-bg);
+    background-color: var(--color-bg-white);
+    overflow: hidden;
+}

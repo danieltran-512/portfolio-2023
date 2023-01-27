@@ -1,0 +1,11 @@
+.cursor{
+    border: 1px solid var(--orange);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}

@@ -1,11 +1,22 @@
+@font-face {
+	font-family: 'Moon Dream';
+	src: url('../assets/fonts/Moon\ Dream.otf');
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../assets/fonts/GrtskMega.ttf');
+	
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-weight: 700;
+  font-family: 'Gotham', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -14,6 +25,137 @@ a {
 * {
   box-sizing: border-box;
 }
+
+body {
+	--green: #008f57;
+	--pink: #e5b5e2;
+	--orange: #fe9d6d;
+	--white: #fff;
+	--black: #000;
+	margin: 0;
+	--color-text: var(--white);
+	--color-bg: var(--green);
+	--color-bg-white: #fffeef;
+	--color-link: #d6af7c;
+	--color-link-hover: #fff;
+	--color-text-circle-1: var(--pink);
+	--color-text-circle-2: var(--white);
+	--color-text-circle-3: var(--pink);
+	--color-text-circle-4: var(--white);
+	--font-circle-1: 'Moon Dream', sans-serif;
+	--font-weight-circle-1: 300;
+	--font-circle-2: 'Moon Dream', serif;
+	--font-weight-circle-2: 400;
+	--font-circle-3: 'Moon Dream', sans-serif;
+	--font-weight-circle-3: 400;
+	--font-circle-4: 'Moon Dream', serif;
+	--font-weight-circle-4: 300;
+	--color-button: #fffeef;
+	--color-text-button: var(--green);
+	--dim-button: 90px;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	cursor: none;
+}
+
+
+h1, h2, h3{
+	font-family: 'Moon Dream', sans-serif;
+}
+
+p{
+	font-family: 'Gotham', sans-serif;
+	line-height: 1.5rem;
+}
+
+h1{
+	font-size: 100px;
+	line-height: 80px;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size: 80px;
+	line-height: 80px;
+	text-transform: uppercase;
+}
+
+h3{ 
+	font-size: 40px;
+	line-height: 80px;
+}
+
+button{
+	background-color: var(--pink);
+	color: var(--black);
+	border: 1px solid var(--black);
+	font-family: 'Gotham', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	width: fit-content;
+	font-size: 20px;
+	padding: 20px 50px;
+	width: fit-content;
+	border-radius: 50%;
+	cursor: none;
+}
+
+.overlay {
+	grid-area: 1 / 1 / 2 / 2;
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	width: 100%;
+	height: 100vh;
+}
+
+.scroll-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	will-change: transform;
+  }
+
+
+.parallax {
+	letter-spacing: -2px;
+	line-height: 0.8;
+	margin: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+  
+.parallax .scroller {
+	font-weight: 600;
+	text-transform: uppercase;
+	display: flex;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.scroller h1{
+	margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	h1{
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	p{
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
