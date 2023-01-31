@@ -10,12 +10,19 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
-interface ParallaxProps {
+interface ParallaxProps extends React.HTMLAttributes<HTMLDivElement> {
   children: any;
   baseVelocity: number;
+  lengthStart?: number;
+  lengthEnd?: number;
 }
 
-function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+function SkewedParallax({
+  children,
+  baseVelocity = 100,
+  lengthStart = -20,
+  lengthEnd = -45,
+}: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -32,7 +39,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(lengthStart, lengthEnd, v)}%`);
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
@@ -74,13 +81,13 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   return (
     <div className="parallax">
       <motion.div className="scroller" style={{ x, skew: skewVelocityFactor }}>
-        <h1>{children}</h1>
-        <h1>{children}</h1>
-        <h1>{children}</h1>
-        <h1>{children}</h1>
+        {children}
+        {children}
+        {children}
+        {children}
       </motion.div>
     </div>
   );
 }
 
-export default ParallaxText;
+export default SkewedParallax;

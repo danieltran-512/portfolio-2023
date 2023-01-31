@@ -1,0 +1,58 @@
+.container{
+    position: relative;
+    min-width: 100vw;
+    width: 100vw;
+    overflow: hidden;
+    color: var(--black);
+    background-color: var(--lavender-haze);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 20px;
+    margin-bottom: -2px;
+}
+
+.projectsDisplay{
+    padding: 30px  0 50px 0;
+}
+
+.container h2{
+    text-align: center;
+}
+
+.wrapper{
+    width: 25vw;
+    background-color: var(--white);
+    border: 5px solid var(--black);
+    color: var(--black);
+    margin: 0 40px;
+    padding: 20px;
+}
+
+.wrapper h4{
+    color: var(--black);
+}
+
+.headingText{
+    padding: 30px;
+    width: 100vw;
+    height: 50vh;
+
+}
+
+.headingText h2{
+    /* make font size span the entire screen based on screen size */
+    font-size: 15vw;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 30px;
+    }
+    .wrapper{
+        width: 75vw;
+    }
+}
+    

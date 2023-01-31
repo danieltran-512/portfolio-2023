@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'Moon Dream';
-	src: url('../assets/fonts/Moon\ Dream.otf');
+	/* src: url('../assets/fonts/Moon\ Dream.otf'); */
+	src: url('../assets/fonts/Maghony.ttf');
+
 }
 
 @font-face {
@@ -27,21 +29,22 @@ a {
 }
 
 body {
+	--lavender-haze: #8f93f8;
 	--green: #008f57;
 	--pink: #e5b5e2;
 	--orange: #fe9d6d;
 	--white: #fff;
-	--black: #000;
+	--black:#1a1a1a;
 	margin: 0;
-	--color-text: var(--white);
-	--color-bg: var(--green);
+	--color-text: var(--black);
+	--color-bg: var(--lavender-haze);
 	--color-bg-white: #fffeef;
 	--color-link: #d6af7c;
 	--color-link-hover: #fff;
-	--color-text-circle-1: var(--pink);
-	--color-text-circle-2: var(--white);
-	--color-text-circle-3: var(--pink);
-	--color-text-circle-4: var(--white);
+	--color-text-circle-1: var(--black);
+	--color-text-circle-2: var(--black);
+	--color-text-circle-3: var(--black);
+	--color-text-circle-4: var(--black);
 	--font-circle-1: 'Moon Dream', sans-serif;
 	--font-weight-circle-1: 300;
 	--font-circle-2: 'Moon Dream', serif;
@@ -50,8 +53,8 @@ body {
 	--font-weight-circle-3: 400;
 	--font-circle-4: 'Moon Dream', serif;
 	--font-weight-circle-4: 300;
-	--color-button: #fffeef;
-	--color-text-button: var(--green);
+	--color-button: var(--black);
+	--color-text-button: var(--white);
 	--dim-button: 90px;
 	color: var(--color-text);
 	background-color: var(--color-bg);
@@ -88,6 +91,11 @@ h3{
 	line-height: 80px;
 }
 
+h4{
+	font-size: 20px;
+	line-height: 20px;
+}
+
 button{
 	background-color: var(--pink);
 	color: var(--black);
@@ -106,7 +114,7 @@ button{
 .overlay {
 	grid-area: 1 / 1 / 2 / 2;
 	position: absolute;
-	z-index: 1000;
+	z-index: 2000;
 	pointer-events: none;
 	width: 100%;
 	height: 100vh;
@@ -119,7 +127,7 @@ button{
 	width: 100%;
 	overflow: hidden;
 	will-change: transform;
-  }
+}
 
 
 .parallax {
@@ -133,7 +141,6 @@ button{
   
 .parallax .scroller {
 	font-weight: 600;
-	text-transform: uppercase;
 	display: flex;
 	white-space: nowrap;
 	display: flex;
@@ -144,10 +151,40 @@ button{
 	margin: 20px;
 }
 
+.logo-container{
+	position: fixed;
+	top: 0;
+	padding:  10px 30px;
+	z-index: 1000;
+	font-family: 'Moon Dream', sans-serif;
+	color: var(--black);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+.logo{
+
+}
+
+.nav-links{
+}
+
+.nav-links p{
+	padding: 0;
+	margin: 0;
+}
+
 @media screen and (max-width: 768px) {
-	h1{
+	h1{	
 		font-size: 50px;
 		line-height: 50px;
+	}
+
+	h2{
+		font-size: 40px;
+		line-height: 40px;
 	}
 
 	p{

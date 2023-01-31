@@ -17,7 +17,7 @@ function WelcomeSection() {
       transition={{ delay: 0.8, duration: 0.8, staggerChildren: 2 }}
     >
       <AnimatedHeading text={welcomeText} />
-      <AnimatedHeading text={welcomeText} color="var(--orange)" />
+      <AnimatedHeading text={welcomeText} color="var(--white)" />
       <AnimatedHeading text={welcomeText} zIndex={2} />
 
       <div className={styles.heroImage}>

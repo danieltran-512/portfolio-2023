@@ -232,7 +232,7 @@ function IntroPage(props: Props) {
             aria-label=""
             textLength="1023"
           >
-            Daniel Tran Portfolio
+            Daniel&apos;s Portfolio &nbsp;
           </textPath>
         </text>
       </svg>

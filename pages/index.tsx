@@ -4,8 +4,8 @@ import LandingPage from "../components/pages/LandingPage";
 import { gsap } from "gsap";
 
 export default function Home() {
+  const firstUpdate = useRef(true);
   const [enterSite, setEnterSite] = useState<boolean>(false);
-  const [isLaunched, setIsLaunched] = useState<boolean>(false);
 
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
   const overlayPath = useRef(null);
@@ -13,50 +13,49 @@ export default function Home() {
   useEffect(() => {
     if (enterSite === true) {
       setIsAnimating(true);
-
-      setTimeout(() => {
-        setIsLaunched(true);
-      }, 1000);
     }
   }, []);
 
   useLayoutEffect(() => {
     if (isAnimating) return;
-
-    gsap
-      .timeline({
-        onComplete: () => setIsAnimating(false),
-      })
-      .set(overlayPath.current, {
-        attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
-      })
-      .to(
-        overlayPath.current,
-        {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+    } else {
+      gsap
+        .timeline({
+          onComplete: () => setIsAnimating(false),
+        })
+        .set(overlayPath.current, {
+          attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
+        })
+        .to(
+          overlayPath.current,
+          {
+            duration: 0.8,
+            ease: "power4.in",
+            attr: { d: "M 0 100 V 50 Q 50 0 100 50 V 100 z" },
+          },
+          0
+        )
+        .to(overlayPath.current, {
+          duration: 0.3,
+          ease: "power2",
+          attr: { d: "M 0 100 V 0 Q 50 0 100 0 V 100 z" },
+        })
+        .set(overlayPath.current, {
+          attr: { d: "M 0 0 V 100 Q 50 100 100 100 V 0 z" },
+        })
+        .to(overlayPath.current, {
+          duration: 0.3,
+          ease: "power2.in",
+          attr: { d: "M 0 0 V 50 Q 50 0 100 50 V 0 z" },
+        })
+        .to(overlayPath.current, {
           duration: 0.8,
-          ease: "power4.in",
-          attr: { d: "M 0 100 V 50 Q 50 0 100 50 V 100 z" },
-        },
-        0
-      )
-      .to(overlayPath.current, {
-        duration: 0.3,
-        ease: "power2",
-        attr: { d: "M 0 100 V 0 Q 50 0 100 0 V 100 z" },
-      })
-      .set(overlayPath.current, {
-        attr: { d: "M 0 0 V 100 Q 50 100 100 100 V 0 z" },
-      })
-      .to(overlayPath.current, {
-        duration: 0.3,
-        ease: "power2.in",
-        attr: { d: "M 0 0 V 50 Q 50 0 100 50 V 0 z" },
-      })
-      .to(overlayPath.current, {
-        duration: 0.8,
-        ease: "power4",
-        attr: { d: "M 0 0 V 0 Q 50 0 100 0 V 0 z" },
-      });
+          ease: "power4",
+          attr: { d: "M 0 0 V 0 Q 50 0 100 0 V 0 z" },
+        });
+    }
   });
 
   return (
@@ -69,7 +68,7 @@ export default function Home() {
         preserveAspectRatio="none"
       >
         <path
-          fill="var(--pink)"
+          fill="var(--black)"
           className="overlay__path"
           ref={overlayPath}
           vectorEffect="non-scaling-stroke"

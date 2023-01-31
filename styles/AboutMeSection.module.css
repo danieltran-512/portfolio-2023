@@ -7,8 +7,9 @@
     min-height: 100vh;
     overflow: hidden;
     color: var(--black);
-    background-color: var(--color-bg-white);
-    margin-bottom: -1px;
+    background-color: var(--lavender-haze);
+    /* padding-bottom: 20vh; */
+    margin-bottom: -2px;
 }
 
 .aboutMe{
@@ -18,9 +19,8 @@
 }
 
 .heading{
-    color: var(--green);
-    border-top: 1px solid var(--green);
-    border-bottom: 1px solid var(--green);
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
     transform: rotate(-5deg);
 }
 

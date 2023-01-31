@@ -25,7 +25,7 @@ function AnimatedHeading(props: Props) {
   const child = {
     hidden: {
       rotate: 90,
-      y: 100,
+      y: 150,
       transition: {
         type: "spring",
         stiffness: 100,
@@ -51,7 +51,7 @@ function AnimatedHeading(props: Props) {
       transition={{ delay: 0.8, duration: 0.8, staggerChildren: 1 }}
       style={{
         margin: "0",
-        paddingTop: "20px",
+        padding: "0px 25px 25px 25px",
         textAlign: "center",
         display: "flex",
         overflow: "hidden",

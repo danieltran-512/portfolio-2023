@@ -1,8 +1,7 @@
 import styles from "../../../styles/AboutMeSection.module.css";
 import ParallaxImage from "../../Parallax/HorizontalParallaxContainer";
-import ParallaxText from "../../Parallax/ParallaxHeading";
+import SkewedParallax from "../../Parallax/SkewedParallax";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import JigglyBodyText from "../../Parallax/JigglyBodyText";
 
 function AboutMe() {
@@ -11,10 +10,14 @@ function AboutMe() {
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
-        <ParallaxText baseVelocity={5}>About me</ParallaxText>
+        <SkewedParallax baseVelocity={5}>
+          <h1>About me</h1>
+        </SkewedParallax>
       </div>
       <div className={styles.heading}>
-        <ParallaxText baseVelocity={-5}>About me</ParallaxText>
+        <SkewedParallax baseVelocity={-5}>
+          <h1>About me</h1>
+        </SkewedParallax>
       </div>
 
       <div className={styles.sectionContainer}>
@@ -31,7 +34,7 @@ function AboutMe() {
         </div>
 
         <JigglyBodyText>
-          <p>
+          <p style={{ zIndex: 5 }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

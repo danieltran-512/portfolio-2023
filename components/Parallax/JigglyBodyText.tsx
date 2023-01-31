@@ -34,7 +34,7 @@ function JigglyBodyText({ children }: ParallaxProps) {
    */
   return (
     <div>
-      <motion.div style={{ skew: skewVelocityFactor }}>{children}</motion.div>
+      <motion.div style={{ skewY: skewVelocityFactor }}>{children}</motion.div>
     </div>
   );
 }
