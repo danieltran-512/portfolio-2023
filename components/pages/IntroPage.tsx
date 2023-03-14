@@ -26,7 +26,7 @@ function IntroPage(props: Props) {
       circleText1.current,
       circleText2.current,
       circleText3.current,
-      circleText4.current,
+      // circleText4.current,
     ];
 
     const circleTexts2 = [
