@@ -15,13 +15,11 @@ function Cursor(props: Props) {
   const { variants, animate } = props;
 
   return (
-    <>
-      <motion.div
-        className={styles.cursor}
-        variants={variants}
-        animate={animate}
-      ></motion.div>
-    </>
+    <motion.div
+      className={styles.cursor}
+      variants={variants}
+      animate={animate}
+    />
   );
 }
 
