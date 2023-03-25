@@ -249,12 +249,56 @@
     width: fit-content;
 }
 
+@media screen and (max-width: 1000px){
+    .headingText h1{
+        font-size: 70px;
+    }
+
+    .headingText h3{
+        font-size: 20px;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
-    .container{
-        padding: 30px;
+    .projectsDisplay{
+        padding: 0 30px;
     }
     .wrapper{
         width: 75vw;
+    }
+
+    .headingText h1{
+        font-size: 40px;
+    }
+
+    .headingText h3{
+        font-size: 20px;
+    }
+
+    .container{
+        gap: 50px;
+    }
+
+    .containerLeft, .containerRight{
+        width: 100vw;
+        margin: 0;
+    }
+
+    .projectTitle{
+        font-size: 30px;
+    }
+
+    .projectTitleDetail{
+        top: 50vh;
+    }
+
+    .projectTechnologyDetail{
+        top: 18vh;
+    }
+
+    .projectImageWrapperOuterDetail{
+        display: none;
     }
 }
     

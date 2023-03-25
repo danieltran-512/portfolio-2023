@@ -26,6 +26,7 @@
 
 .heroImage{
     display: block;
+    filter: grayscale(1);
 }
 
 .sectionContainer{

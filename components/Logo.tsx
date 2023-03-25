@@ -50,7 +50,7 @@ function Logo(props: Props) {
     >
       <motion.svg
         className="logo"
-        style={{ rotate: rotateVelocityFactor }}
+        style={{ rotate: rotateVelocityFactor, cursor: "default" }}
         viewBox="0 0 100 100"
         width="100"
         height="100"

@@ -364,7 +364,12 @@ function Work(props: Props) {
             <h3>Description</h3>
             <p>{projects[currentView].description}</p>
           </div>
-          <div className={styles.arrowBackDetail} onClick={goBack}>
+          <div
+            className={styles.arrowBackDetail}
+            onClick={goBack}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             <Arrow />
           </div>
           <div className={styles.projectTechnologyDetail}>

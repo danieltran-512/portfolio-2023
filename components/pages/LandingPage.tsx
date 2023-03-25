@@ -5,6 +5,7 @@ import Button from "../Button";
 import Cursor from "../Cursor";
 import Logo from "../Logo";
 import AboutMe from "./landingPageComponents/AboutMeSection";
+import ContactSection from "./landingPageComponents/ContactSection";
 import WelcomeSection from "./landingPageComponents/WelcomeSection";
 import Work from "./landingPageComponents/Work";
 
@@ -51,6 +52,7 @@ function LandingPage() {
       <WelcomeSection />
       <AboutMe />
       <Work onMouseEnter={textEnter} onMouseLeave={textLeave} />
+      <ContactSection />
       {/* </SmoothScroll> */}
     </>
   );
