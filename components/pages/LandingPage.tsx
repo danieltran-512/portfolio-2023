@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/LandingPage.module.css";
-import SmoothScroll from "../animation/SmoothScroll";
+import SmoothScroll from "../Animations/SmoothScroll";
 import Button from "../Button";
-import Cursor from "../cursor";
+import Cursor from "../Cursor";
 import Logo from "../Logo";
 import AboutMe from "./landingPageComponents/AboutMeSection";
 import WelcomeSection from "./landingPageComponents/WelcomeSection";
@@ -28,15 +28,15 @@ function LandingPage() {
     default: {
       x: mousePosition.x - 15,
       y: mousePosition.y - 15,
-      border: "1px solid var(--orange)",
+      border: "1px solid var(--lavender-haze)",
       backgroundColor: "transparent",
     },
     button: {
       x: mousePosition.x - 15,
       y: mousePosition.y - 15,
       scale: 1.5,
-      border: "2px solid var(--green)",
-      backgroundColor: "var(--green)",
+      border: "2px solid var(--lavender-haze)",
+      backgroundColor: "var(--lavender-haze)",
     },
   };
 
@@ -47,18 +47,11 @@ function LandingPage() {
     <>
       <Logo onMouseEnter={textEnter} onMouseLeave={textLeave} />
       <Cursor variants={variants} animate={cursorVariant} />
-      <SmoothScroll>
-        <WelcomeSection />
-        <AboutMe />
-        <Work />
-        <div className={styles.container}>
-          <Button
-            label="Fuck you"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
-          />
-        </div>
-      </SmoothScroll>
+      {/* <SmoothScroll> */}
+      <WelcomeSection />
+      <AboutMe />
+      <Work onMouseEnter={textEnter} onMouseLeave={textLeave} />
+      {/* </SmoothScroll> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 .cursor{
-    border: 1px solid var(--orange);
+    border: 1px solid var(--lavender-haze);
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -7,5 +7,5 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 99999999999;
 }

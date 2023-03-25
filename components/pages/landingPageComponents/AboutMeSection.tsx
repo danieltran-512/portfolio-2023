@@ -27,14 +27,14 @@ function AboutMe() {
               loader={() => src}
               src={src}
               alt="123"
-              width={500}
-              height={300}
+              width={600}
+              height={350}
             />
           </ParallaxImage>
         </div>
 
         <JigglyBodyText>
-          <p style={{ zIndex: 5 }}>
+          <h5 style={{ zIndex: 5 }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -44,7 +44,7 @@ function AboutMe() {
             with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
-          </p>
+          </h5>
         </JigglyBodyText>
       </div>
     </div>

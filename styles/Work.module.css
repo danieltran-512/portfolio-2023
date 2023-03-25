@@ -3,8 +3,8 @@
     min-width: 100vw;
     width: 100vw;
     overflow: hidden;
-    color: var(--black);
-    background-color: var(--lavender-haze);
+    color: var(--lavender-haze);
+    background-color: var(--black);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,14 @@
 }
 
 .projectsDisplay{
-    padding: 30px  0 50px 0;
+   padding: 50px;
+   width: 100vw;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   row-gap: 10%;
+   column-gap: 10%;
+   margin-top: 10%;
 }
 
 .container h2{
@@ -37,13 +44,209 @@
 .headingText{
     padding: 30px;
     width: 100vw;
-    height: 100vh;
-
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 30px
 }
 
-.headingText h2{
-    /* make font size span the entire screen based on screen size */
-    font-size: 15vw;
+.headingText h1{
+    font-size: 150px;
+    text-transform:capitalize !important;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+}
+
+.headingText h3{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.contentOverlay{
+    background: var(--black);
+    position: fixed;
+	top: calc(50% - 80vmax);
+	left: calc(50% - 80vmax);
+	width: 175vmax;
+	height: 150vmax;
+	pointer-events: none;
+	will-change: transform;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.contentOverlayInnter{
+    background: var(--black);
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.projectsInnerDisplay{
+    height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: grid;
+	color: var(--white);
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.containerLeft{
+    margin-top: -10%;
+    width: 45%;
+    color: white;
+}
+
+.containerRight{
+    margin-top: 10%;
+    width: 45%;
+    color: white;
+}
+
+.projectTitle{
+    font-family: 'Moon Dream', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.projectSubtitle{
+    color: var(--lavender-haze)
+}
+
+.projectImageWrapper{
+    overflow: hidden;
+	position: relative;
+	width: 80%;
+	aspect-ratio: 0.75;
+	cursor: pointer;
+	will-change: transform;
+}
+
+.projectImage{
+    background-size: cover;
+	background-position: 50% 50%;
+    filter: grayscale(1);
+	width: 100%;
+	height: 100%;
+	will-change: transform;
+}
+
+.detailedContentDetail{
+    opacity: 0;
+	will-change: clip-path;
+    position: relative;
+}
+
+.projectImageWrapperOuterDetail{
+    align-self: center;
+	justify-self: center;
+	width: 60vw;
+	max-width: 800px;
+    height: 80%;
+	width: 36vw;
+	aspect-ratio: 0.7;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+
+.projectImageWrapperDetail{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	will-change: transform;
+}
+
+.imageOverlayDetail{
+    position: absolute;
+    background-color: var(--black);
+    opacity: 0.5;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.projectImageDetail {
+	background-size: cover;
+	background-position: 50% 50%;
+	width: 100%;
+	height: 100%;
+	will-change: transform;
+}
+
+.projectTitleDetail{
+	padding-top: 1vw;
+    z-index: 2;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.projectTitleDetail h3{
+    font-size: clamp(2rem, 7vw, 17rem);
+	font-family: 'Moon Dream', sans-serif;
+	font-weight: 300;
+    margin: 0;
+	line-height: 1;
+    text-transform: uppercase;
+}
+
+.projectLinkDetail{
+    font-family: 'Daniel', sans-serif;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.projectDescriptionDetail{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 80%;
+    z-index: 3;
+}
+
+.projectTechnologyDetail{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    text-align: right;
+    z-index: 3;
+}
+
+.projectDescriptionDetail h3, .projectTechnologyDetail h3{
+    color: var(--lavender-haze);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.arrowBackDetail{
+    padding: 100px 50px;
+    cursor: pointer;
+    width: fit-content;
 }
 
 @media screen and (max-width: 768px) {

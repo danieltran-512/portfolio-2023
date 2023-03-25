@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "../../../styles/WelcomeSection.module.css";
-import AnimatedHeading from "../../animation/AnimatedHeading";
+import AnimatedHeading from "../../Animations/AnimatedHeading";
 import ParallaxImage from "../../Parallax/HorizontalParallaxContainer";
 
 function WelcomeSection() {

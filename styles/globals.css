@@ -6,17 +6,24 @@
 }
 
 @font-face {
-	font-family: 'Gotham';
+	font-family: 'Daniel';
 	src: url('../assets/fonts/GrtskMega.ttf');
+	
+}
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../assets/fonts/HelveticaNeueLTPro-Roman.otf');
 	
 }
 
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-weight: 700;
-  font-family: 'Gotham', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Daniel', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 a {
@@ -37,14 +44,14 @@ body {
 	--black:#1a1a1a;
 	margin: 0;
 	--color-text: var(--black);
-	--color-bg: var(--lavender-haze);
+	--color-bg: var(--black);
 	--color-bg-white: #fffeef;
 	--color-link: #d6af7c;
 	--color-link-hover: #fff;
-	--color-text-circle-1: var(--black);
-	--color-text-circle-2: var(--black);
-	--color-text-circle-3: var(--black);
-	--color-text-circle-4: var(--black);
+	--color-text-circle-1: var(--lavender-haze);
+	--color-text-circle-2: var(--lavender-haze);
+	--color-text-circle-3: var(--lavender-haze);
+	--color-text-circle-4: var(--lavender-haze);
 	--font-circle-1: 'Moon Dream', sans-serif;
 	--font-weight-circle-1: 300;
 	--font-circle-2: 'Moon Dream', serif;
@@ -53,24 +60,32 @@ body {
 	--font-weight-circle-3: 400;
 	--font-circle-4: 'Moon Dream', serif;
 	--font-weight-circle-4: 300;
-	--color-button: var(--black);
-	--color-text-button: var(--white);
+	--color-button: var(--lavender-haze);
+	--color-text-button: var(--black);
 	--dim-button: 90px;
 	color: var(--color-text);
 	background-color: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	cursor: none;
 }
 
 
 h1, h2, h3{
-	font-family: 'Moon Dream', sans-serif;
+	font-family: 'Daniel', sans-serif;
+}
+
+h5{
+	font-family: 'Daniel', sans-serif;
+	font-weight: 200;
+	line-height: 1.5rem;
+	letter-spacing: -1.5px;
+	font-size: 18px;
 }
 
 p{
-	font-family: 'Gotham', sans-serif;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: 200;
 	line-height: 1.5rem;
 }
 
@@ -100,7 +115,7 @@ button{
 	background-color: var(--pink);
 	color: var(--black);
 	border: 1px solid var(--black);
-	font-family: 'Gotham', sans-serif;
+	font-family: 'Daniel', sans-serif;
 	font-size: 30px;
 	text-transform: uppercase;
 	width: fit-content;

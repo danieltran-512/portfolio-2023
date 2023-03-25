@@ -29,8 +29,6 @@ function Logo(props: Props) {
     window.addEventListener("scroll", handleScroll);
   }, [openMenu]);
 
-  console.log(openMenu);
-
   const rotateVelocity = useSpring(scrollVelocity, {
     stiffness: 40,
     damping: 30,
@@ -71,7 +69,9 @@ function Logo(props: Props) {
           />
         </defs>
         <text font-size="14">
-          <textPath xlinkHref="#circle">daniel tran</textPath>
+          <textPath fill="var(--lavender-haze)" xlinkHref="#circle">
+            daniel tran
+          </textPath>
         </text>
       </motion.svg>
       {openMenu && (

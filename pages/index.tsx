@@ -68,7 +68,7 @@ export default function Home() {
         preserveAspectRatio="none"
       >
         <path
-          fill="var(--black)"
+          fill="var(--lavender-haze)"
           className="overlay__path"
           ref={overlayPath}
           vectorEffect="non-scaling-stroke"

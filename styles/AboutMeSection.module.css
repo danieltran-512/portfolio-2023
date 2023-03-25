@@ -6,8 +6,8 @@
     width: 100vw;
     min-height: 100vh;
     overflow: hidden;
-    color: var(--black);
-    background-color: var(--lavender-haze);
+    color: var(--lavender-haze);
+    background-color: var(--black);
     /* padding-bottom: 20vh; */
     margin-bottom: -2px;
 }
@@ -19,8 +19,8 @@
 }
 
 .heading{
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
+    border-top: 1px solid var(--lavender-haze);
+    border-bottom: 1px solid var(--lavender-haze);
     transform: rotate(-5deg);
 }
 
