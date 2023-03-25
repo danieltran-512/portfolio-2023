@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Cursor from "../Cursor";
+import Cursor from "../Cursor/Cursor";
 import Logo from "../Logo";
 import AboutMe from "./landingPageComponents/AboutMeSection";
 import ContactSection from "./landingPageComponents/ContactSection";
