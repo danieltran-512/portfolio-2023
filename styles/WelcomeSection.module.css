@@ -26,3 +26,9 @@
     text-align: center;
     color: var(--white)
 }
+
+@media screen and (max-width: 768px) {
+	.container h1{
+        font-size: 2.5em !important;
+    }
+}
