@@ -293,12 +293,24 @@
         top: 50vh;
     }
 
+    .projectLinkDetail{
+        flex-direction: column;
+        gap: 10px
+    }
+
     .projectTechnologyDetail{
         top: 18vh;
     }
 
     .projectImageWrapperOuterDetail{
         display: none;
+    }
+
+
+    .projectTechnologyDetail h3,
+    .projectDescriptionDetail h3{
+        font-size: 20px;
+        line-height: 25px;
     }
 }
     
