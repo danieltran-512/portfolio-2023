@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from "../../styles/LandingPage.module.css";
-import SmoothScroll from "../Animations/SmoothScroll";
-import Button from "../Button";
 import Cursor from "../Cursor";
 import Logo from "../Logo";
 import AboutMe from "./landingPageComponents/AboutMeSection";
