@@ -25,7 +25,7 @@ function WelcomeSection() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <ParallaxImage offset={-50}>
+        <ParallaxImage offset={20}>
           <Image
             loader={() => src}
             src={src}
