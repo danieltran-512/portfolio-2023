@@ -19,17 +19,22 @@ function WelcomeSection() {
       <AnimatedHeading text={welcomeText} color="var(--white)" />
       <AnimatedHeading text={welcomeText} zIndex={2} />
 
-      <div className={styles.heroImage}>
+      <motion.div
+        className={styles.heroImage}
+        initial={{ opacity: 0, scale: 0.3 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+      >
         <ParallaxImage offset={-50}>
           <Image
             loader={() => src}
             src={src}
             alt="123"
-            width={300}
+            width={280}
             height={400}
           />
         </ParallaxImage>
-      </div>
+      </motion.div>
       <motion.p
         className={styles.introText}
         initial={{ opacity: 0 }}

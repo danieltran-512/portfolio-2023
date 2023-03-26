@@ -5,8 +5,7 @@ import Image from "next/image";
 import JigglyBodyText from "../../Parallax/JigglyBodyText";
 
 function AboutMe() {
-  const src =
-    "https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-03-scaled.jpeg";
+  const src = "https://i.imgur.com/5FxAQVU.jpeg";
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
@@ -28,7 +27,7 @@ function AboutMe() {
               src={src}
               alt="123"
               width={600}
-              height={350}
+              height={400}
             />
           </ParallaxImage>
         </div>
