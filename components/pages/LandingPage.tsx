@@ -63,13 +63,15 @@ function LandingPage() {
         />
         <ContactSection />
       </SmoothScroll>
-      <ProjectItem
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        currentView={currentView}
-        onMouseEnter={textEnter}
-        onMouseLeave={textLeave}
-      />
+      {isOpen && (
+        <ProjectItem
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          currentView={currentView}
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+        />
+      )}
     </>
   );
 }

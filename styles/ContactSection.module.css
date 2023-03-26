@@ -39,4 +39,8 @@
         flex-direction: column;
         gap: 10px
     }
+
+    .container{
+        padding: 0 30px
+    }
 }

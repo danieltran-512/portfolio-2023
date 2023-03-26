@@ -157,8 +157,8 @@ function ProjectItem(props: Props) {
           ease: "power4",
         },
         onComplete: () => {
-          gsap.set(detailProjectWrapperRef.current, { pointerEvents: "none" });
           setIsOpen(false);
+          gsap.set(detailProjectWrapperRef.current, { pointerEvents: "none" });
           setIsAnimating(false);
         },
       })
@@ -214,7 +214,6 @@ function ProjectItem(props: Props) {
         {
           ease: "power4",
           xPercent: 150,
-          duration: 2,
         },
         "start"
       )
@@ -222,7 +221,7 @@ function ProjectItem(props: Props) {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.contentOverlay} ref={contentOverlayInnerRef}>
         <div className={styles.contentOverlayInner} />
       </div>
