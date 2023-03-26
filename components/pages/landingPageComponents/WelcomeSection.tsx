@@ -30,8 +30,8 @@ function WelcomeSection() {
             loader={() => src}
             src={src}
             alt="123"
-            width={280}
-            height={400}
+            width={300}
+            height={450}
           />
         </ParallaxImage>
       </motion.div>

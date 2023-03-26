@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import SmoothScroll from "../Animations/SmoothScroll";
 import Cursor from "../Cursor/Cursor";
 import Logo from "../Logo";
+import ProjectItem from "../ProjectItem";
 import AboutMe from "./landingPageComponents/AboutMeSection";
 import ContactSection from "./landingPageComponents/ContactSection";
 import WelcomeSection from "./landingPageComponents/WelcomeSection";
@@ -41,16 +43,33 @@ function LandingPage() {
   const textEnter = () => setCursorVariant("button");
   const textLeave = () => setCursorVariant("default");
 
+  const [currentView, setCurrentView] = React.useState(0);
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <>
       <Logo onMouseEnter={textEnter} onMouseLeave={textLeave} />
       <Cursor variants={variants} animate={cursorVariant} />
-      {/* <SmoothScroll> */}
-      <WelcomeSection />
-      <AboutMe />
-      <Work onMouseEnter={textEnter} onMouseLeave={textLeave} />
-      <ContactSection />
-      {/* </SmoothScroll> */}
+      <SmoothScroll>
+        <WelcomeSection />
+        <AboutMe />
+        <Work
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+          currentView={currentView}
+          setCurrentView={setCurrentView}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
+        <ContactSection />
+      </SmoothScroll>
+      <ProjectItem
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        currentView={currentView}
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
+      />
     </>
   );
 }

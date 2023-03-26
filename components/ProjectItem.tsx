@@ -2,19 +2,134 @@ import React from "react";
 import Arrow from "../assets/icons/Arrow.svg";
 import styles from "../styles/Work.module.css";
 import getProjects from "../utils/getProjects";
+import { gsap } from "gsap";
 
 interface Props {
   currentView: number;
+  isOpen: boolean;
+  setIsOpen: (v: boolean) => void;
+
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
 function ProjectItem(props: Props) {
-  const { currentView } = props;
+  const { currentView, isOpen, setIsOpen, onMouseEnter, onMouseLeave } = props;
   const projects = getProjects();
 
   const contentOverlayInnerRef = React.useRef<HTMLDivElement>(null);
   const detailProjectRef = React.useRef<HTMLDivElement>(null);
   const detailProjectWrapperRef = React.useRef<HTMLDivElement>(null);
   const [isAnimating, setIsAnimating] = React.useState(false);
+
+  React.useEffect(() => {
+    gsap.set(contentOverlayInnerRef.current, {
+      xPercent: -100,
+    });
+  }, []);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      setIsAnimating(true);
+      console.log("lick");
+      const contentOverlayInner = contentOverlayInnerRef.current;
+      const projectItem = detailProjectRef.current;
+
+      console.log(projectItem);
+      console.log(projectItem?.children);
+
+      if (!projectItem?.children) return;
+
+      const projectImageWrapper = projectItem.children[4];
+      const projectImage = projectImageWrapper.children[0].children[1];
+      const projectImageOverlay = projectImageWrapper.children[0].children[0];
+
+      console.log(projectImage, "keke", projectImageOverlay);
+      const slideTexts = [projectItem.children[1], projectItem.children[3]];
+      const projectDescription = projectItem.children[0];
+      const projectArrowBack = projectItem.children[2];
+
+      gsap
+        .timeline({
+          defaults: {
+            duration: 1.1,
+            ease: "expo",
+          },
+          onStart: () => {
+            gsap.set(detailProjectWrapperRef.current, {
+              pointerEvents: "auto",
+            });
+            gsap.set(projectImage, { xPercent: 100 });
+            gsap.set(projectImageWrapper, { xPercent: -102, opacity: 0 });
+            gsap.set(slideTexts, { yPercent: 100 });
+            gsap.set(projectDescription, { yPercent: 15, opacity: 0 });
+            gsap.set(projectArrowBack, { x: "+=15%", opacity: 0 });
+          },
+          onComplete: () => setIsAnimating(false),
+        })
+        .addLabel("start", 0)
+        .addLabel("preview", "start+=0.3")
+        .to(projectItem, { opacity: 1 })
+        .to(
+          contentOverlayInner,
+          {
+            ease: "power2",
+            startAt: { xPercent: -175 },
+            xPercent: 0,
+          },
+          "start"
+        )
+        .to(
+          [projectImage, projectImageWrapper, projectImageOverlay],
+          {
+            xPercent: 0,
+          },
+          "preview"
+        )
+        .to(
+          projectImageWrapper,
+          {
+            opacity: 1,
+          },
+          "preview"
+        )
+        .to(
+          slideTexts,
+          {
+            opacity: 1,
+            yPercent: 0,
+            stagger: 0.05,
+          },
+          "preview"
+        )
+        .to(
+          projectDescription,
+          {
+            ease: "power2",
+            opacity: 1,
+            stagger: 0.05,
+          },
+          "preview"
+        )
+        .to(
+          projectDescription,
+          {
+            yPercent: 0,
+            stagger: 0.05,
+          },
+          "preview"
+        )
+        .to(
+          projectArrowBack,
+          {
+            ease: "power2",
+            opacity: 1,
+            x: "-=15%",
+          },
+          "preview"
+        );
+    }
+  }, [isOpen]);
 
   const goBack = () => {
     if (isAnimating) return;
@@ -43,7 +158,7 @@ function ProjectItem(props: Props) {
         },
         onComplete: () => {
           gsap.set(detailProjectWrapperRef.current, { pointerEvents: "none" });
-
+          setIsOpen(false);
           setIsAnimating(false);
         },
       })
@@ -137,7 +252,12 @@ function ProjectItem(props: Props) {
             <h3>Description</h3>
             <p>{projects[currentView].description}</p>
           </div>
-          <div className={styles.arrowBackDetail} onClick={goBack}>
+          <div
+            className={styles.arrowBackDetail}
+            onClick={goBack}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             <Arrow />
           </div>
           <div className={styles.projectTechnologyDetail}>

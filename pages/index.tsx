@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import IntroPage from "../components/pages/IntroPage";
 import LandingPage from "../components/pages/LandingPage";
 import { gsap } from "gsap";
+import Head from "next/head";
 
 export default function Home() {
   const firstUpdate = useRef(true);
@@ -60,6 +61,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>daniel tran</title>
+        <meta property="og:title" content="daniel tran" key="title" />
+      </Head>
       <svg
         className="overlay"
         width="100%"
