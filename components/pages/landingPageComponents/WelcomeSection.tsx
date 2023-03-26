@@ -6,7 +6,7 @@ import ParallaxImage from "../../Parallax/HorizontalParallaxContainer";
 
 function WelcomeSection() {
   const welcomeText = "Welcome";
-  const src = "https://i.imgur.com/WRRfwfa.jpeg";
+  const src = "https://i.imgur.com/ZJmDvcv.jpeg";
 
   return (
     <motion.div
@@ -25,8 +25,8 @@ function WelcomeSection() {
             loader={() => src}
             src={src}
             alt="123"
-            width={280}
-            height={280}
+            width={300}
+            height={400}
           />
         </ParallaxImage>
       </div>
