@@ -192,7 +192,7 @@
     position: absolute;
     width: 100vw;
     text-align: center;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -35%);
     display: flex;
@@ -290,22 +290,29 @@
     }
 
     .projectTitleDetail{
-        top: 50vh;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
     }
 
     .projectLinkDetail{
         flex-direction: column;
         gap: 10px
     }
+    
+    .projectDescriptionDetail{
+       left: 30px;
+    }
 
     .projectTechnologyDetail{
-        top: 18vh;
+        top: 20vh;
+        left: 30px;
+        text-align: left;
     }
 
     .projectImageWrapperOuterDetail{
         display: none;
     }
-
 
     .projectTechnologyDetail h3,
     .projectDescriptionDetail h3{
