@@ -97,7 +97,7 @@ function Work(props: Props) {
   return (
     <div className={styles.container}>
       <section className={styles.headingText}>
-        <h3>Subtitle</h3>
+        <h3>My best work</h3>
         <h1>Projects</h1>
       </section>
 

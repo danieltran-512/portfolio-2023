@@ -3,7 +3,7 @@ import styles from "../../../styles/ContactSection.module.css";
 function ContactSection() {
   return (
     <div className={styles.container}>
-      <h4 className={styles.subtitle}>Subtitle</h4>
+      <h4 className={styles.subtitle}>Stay connected</h4>
       <h2 className={styles.title}>Keep in touch</h2>
       <div className={styles.links}>
         <a>LinkedIn</a>
