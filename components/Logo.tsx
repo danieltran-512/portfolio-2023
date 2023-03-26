@@ -17,18 +17,6 @@ function Logo(props: Props) {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
 
-  const [openMenu, setOpenMenu] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (openMenu) {
-        setOpenMenu(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-  }, [openMenu]);
-
   const rotateVelocity = useSpring(scrollVelocity, {
     stiffness: 40,
     damping: 30,
@@ -56,7 +44,6 @@ function Logo(props: Props) {
         height="100"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        onClick={() => setOpenMenu(!openMenu)}
       >
         <defs>
           <path
@@ -74,13 +61,6 @@ function Logo(props: Props) {
           </textPath>
         </text>
       </motion.svg>
-      {openMenu && (
-        <div className="nav-links">
-          <p>LinkedIn</p>
-          <p>GitHub</p>
-          <p>My CV</p>
-        </div>
-      )}
     </motion.div>
   );
 }
