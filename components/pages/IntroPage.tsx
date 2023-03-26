@@ -84,7 +84,7 @@ function IntroPage(props: Props) {
       .addLabel("start", 0)
       // scale in the texts & enter button and fade them in
       .to(
-        [circleText, enterCtrl.current],
+        [circleText],
         {
           duration: 2.5,
           ease: "expo",
@@ -97,8 +97,14 @@ function IntroPage(props: Props) {
         },
         "start"
       )
-      // at start+1 allow the hover over the enter ctrl
-      .add(gsap.set(enterCtrl.current, { pointerEvents: "auto" }), "start+=1");
+      .to([enterCtrl.current], {
+        ease: "expo",
+        startAt: { opacity: 0, scale: 0.3, pointerEvents: "none" },
+        scale: 1,
+        opacity: 1,
+        pointerEvents: "auto",
+      });
+    // at start+1 allow the hover over the enter ctrl
   });
 
   const handleEnter = () => {
@@ -193,7 +199,7 @@ function IntroPage(props: Props) {
             aria-label=""
             textLength="2830"
           >
-            Graduate Software Developer
+            Junior Software Developer
           </textPath>
         </text>
         <text

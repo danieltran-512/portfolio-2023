@@ -289,7 +289,6 @@ function Work(props: Props) {
         {
           ease: "power4",
           xPercent: 150,
-          duration: 2,
         },
         "start"
       )

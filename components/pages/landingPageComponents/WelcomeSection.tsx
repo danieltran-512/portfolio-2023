@@ -6,8 +6,7 @@ import ParallaxImage from "../../Parallax/HorizontalParallaxContainer";
 
 function WelcomeSection() {
   const welcomeText = "Welcome";
-  const src =
-    "https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-03-scaled.jpeg";
+  const src = "https://i.imgur.com/WRRfwfa.jpeg";
 
   return (
     <motion.div
@@ -26,8 +25,8 @@ function WelcomeSection() {
             loader={() => src}
             src={src}
             alt="123"
-            width={500}
-            height={300}
+            width={280}
+            height={280}
           />
         </ParallaxImage>
       </div>
