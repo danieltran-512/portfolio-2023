@@ -180,14 +180,24 @@ button{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
 }
 
-.logo{
-
+.link-wrapper{
+	position: relative;
+	width: fit-content;
+	padding-bottom: 3px;
+	color: var(--white);
+	text-transform: uppercase;
 }
 
-.nav-links{
+.underline {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 0; 
+    height: 1px;
+    background-color: var(--white);
 }
 
 .nav-links p{
@@ -210,6 +220,7 @@ button{
 		font-size: 12px;
 		line-height: 18px;
 	}
+	
 }
 
 

@@ -3,6 +3,7 @@ import Arrow from "../assets/icons/Arrow.svg";
 import styles from "../styles/Work.module.css";
 import getProjects from "../utils/getProjects";
 import { gsap } from "gsap";
+import AnimatedLink from "./AnimatedLink";
 
 interface Props {
   currentView: number;
@@ -233,18 +234,18 @@ function ProjectItem(props: Props) {
           <div className={styles.projectTitleDetail}>
             <h3>{projects[currentView].title}</h3>
             <p className={styles.projectLinkDetail}>
-              <a
-                className={styles.projectLink}
-                href={projects[currentView].github}
-              >
-                Github
-              </a>
-              <a
-                className={styles.projectLink}
-                href={projects[currentView].liveDemo}
-              >
-                Live site
-              </a>
+              <div className={styles.projectLink}>
+                <AnimatedLink
+                  href={projects[currentView].github}
+                  label="Github"
+                />
+              </div>
+              <div className={styles.projectLink}>
+                <AnimatedLink
+                  href={projects[currentView].liveDemo}
+                  label="Live Site"
+                />
+              </div>
             </p>
           </div>
           <div className={styles.projectDescriptionDetail}>
