@@ -32,20 +32,23 @@ function AboutMe() {
             />
           </ParallaxImage>
         </div>
-
-        <JigglyBodyText>
-          <h5 style={{ zIndex: 5 }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </h5>
-        </JigglyBodyText>
+        <div style={{ zIndex: 10 }}>
+          <JigglyBodyText>
+            <h5>
+              As a software developer with a Bachelor of Computer & Information
+              Sciences degree from AUT University, I have a strong foundation in
+              the technical skills needed to create and maintain complex
+              software systems. With a minor in Digital Communication, I have an
+              understanding of how to effectively communicate and collaborate
+              with other professionals in the field. My keen interest in
+              exploring various features of websites demonstrates my curiosity
+              and willingness to learn and grow as a developer. My general
+              aesthetic of minimalism and sophistication shows my attention to
+              detail and ability to create user-friendly designs. Have a look
+              through at my previous work to get to know more about me.
+            </h5>
+          </JigglyBodyText>
+        </div>
       </div>
     </div>
   );

@@ -119,7 +119,8 @@
 }
 
 .projectSubtitle{
-    color: var(--lavender-haze)
+    color: var(--lavender-haze);
+    width: 70%;
 }
 
 .projectImageWrapper{
@@ -290,7 +291,7 @@
     }
 
     .projectTitleDetail{
-        top: 40%;
+        top: 50%;
         left: 45%;
         transform: translate(-50%, -50%);
     }
