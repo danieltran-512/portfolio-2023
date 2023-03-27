@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import React from "react";
 import styles from "../../../styles/Work.module.css";
 import getProjects from "../../../utils/getProjects";
+import AnimatedFlyInText from "../../Animations/AnimatedFlyInText";
 
 interface Props {
   onMouseEnter: () => void;
@@ -97,8 +98,12 @@ function Work(props: Props) {
   return (
     <div className={styles.container}>
       <section className={styles.headingText}>
-        <h3>Explore some of my best works</h3>
-        <h1>Projects</h1>
+        <h3>
+          <AnimatedFlyInText text="Explore some of my best works" />
+        </h3>
+        <h1>
+          <AnimatedFlyInText text="Projects" />
+        </h1>
       </section>
 
       <section className={styles.projectsDisplay}>
