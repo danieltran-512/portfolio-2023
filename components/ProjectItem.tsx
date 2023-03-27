@@ -159,11 +159,11 @@ function ProjectItem(props: Props) {
         },
         onComplete: () => {
           setIsOpen(false);
-          gsap.set(detailProjectWrapperRef.current, { pointerEvents: "none" });
           setIsAnimating(false);
         },
       })
       .addLabel("start", 0)
+      .to(detailProjectWrapperRef.current, { pointerEvents: "none" })
       .to(
         projectArrowBack,
         {

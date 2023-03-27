@@ -42,7 +42,7 @@ function WelcomeSection() {
         transition={{ delay: 2.5 }}
         style={{ position: "absolute", bottom: "0" }}
       >
-        Continue scrolling to get to know more about me
+        (Scroll)
       </motion.p>
     </motion.div>
   );
