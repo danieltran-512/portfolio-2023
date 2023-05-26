@@ -204,7 +204,7 @@
 }
 
 .projectTitleDetail h3{
-    font-size: clamp(2rem, 7vw, 17rem);
+    font-size: clamp(1.5rem, 6vw, 10rem);
 	font-family: 'Moon Dream', sans-serif;
 	font-weight: 300;
     margin: 0;
@@ -218,7 +218,7 @@
     z-index: 99999999999;
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .projectDescriptionDetail{

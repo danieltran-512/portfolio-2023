@@ -11,6 +11,29 @@ export interface ProjectModel {
 export default function getProjects() {
   const mockProjects: ProjectModel[] = [
     {
+      title: "Green Solutions (Ongoing)",
+      subtitle:
+        "Company team specialises in providing newest engineering HVAC heating, ventilation and air conditioning solutions for commercial building industry sector.",
+      image:
+        "https://cms.greensolutions.thedevguys.co.nz/wp-content/uploads/2023/04/92A2585-scaled.jpg",
+      description:
+        "In this project, I utilised multiple animations to create a smooth and sleek portfolio for Green Solutions, a supplier of high energy efficient HVAC/heating, ventilation and air conditioning/equipment to New Zealand building industry. I challenged myself in exploring what react-spring is capable of, and was able to create more animations based on the user's behaviour, such as parallax on scroll, or dynamic navigation bar.",
+      techUsed: "Next.js, Headless Wordpress CMS",
+      liveDemo: "https://greensolutions.thedevguys.co.nz/",
+    },
+    {
+      title: "Laminate Benchtops (Ongoing)",
+      subtitle:
+        "Website for Telecom Niue, a telecommunication service provider based on the island of Niue",
+      image:
+        "https://cms.benchtops.thedevguys.co.nz/wp-content/uploads/2023/03/Rectangle-16.png",
+      description:
+        "In this project, I utilised Nextjs and Wordpress to develop a fullstack e-commerce web application for Laminate Benchtop specialising in customising benchtops in New Zealand. I faced a challenge when I have to create a benchtop builder form to build custom benchtop and the image changes based on the user input. It is quite an interesting experience since I had to combine a Variable Product & Simple Product in woocommerce to develop a complete customised benchtop for the user. ",
+      techUsed: "Next.js, Headless Wordpress CMS, WooCommerce, Stripe",
+      liveDemo: "http://benchtops.thedevguys.co.nz/",
+    },
+
+    {
       title: "Telecom Niue",
       subtitle:
         "Website for Telecom Niue, a telecommunication service provider based on the island of Niue",
@@ -18,7 +41,8 @@ export default function getProjects() {
         "https://i.guim.co.uk/img/media/d7dabe517046732b9d361567301f02a62d110c7a/0_77_5150_3089/master/5150.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9d5c860207e834d4cbe346894fbb1caf",
       description:
         "Telcom Niue is an e-commerce website in Niue that advertises phone plans and devices. It's built using Next.js and a headless WordPress CMS, with WooCommerce and authentication system integrations for smooth, secure transactions.",
-      techUsed: "Next.js, WordPress, WooCommerce, Material UI, Verifone",
+      techUsed:
+        "Next.js, Headless Wordpress CMS, WooCommerce, Material UI, Verifone",
       liveDemo: "https://telecomniue.com/",
     },
 
@@ -43,7 +67,7 @@ export default function getProjects() {
         "https://www.cms.1stcall.co.nz/wp-content/uploads/2022/12/DSC_2561-scaled.jpg",
       description:
         "I worked on a project for 1st Call, a recruitment agency that partners with employers to help job seekers find employment easily. This was my first experience using Next.js and a headless WordPress CMS, but with the help of my mentor, I delivered a high-quality website that met the client's requirements.",
-      techUsed: "Next.js, WordPress, Material UI",
+      techUsed: "Next.js, Headless Wordpress CMS, Material UI",
       liveDemo: "https://www.1stcall.co.nz/",
     },
 

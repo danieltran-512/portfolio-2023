@@ -236,12 +236,6 @@ function ProjectItem(props: Props) {
             <p className={styles.projectLinkDetail}>
               <div className={styles.projectLink}>
                 <AnimatedLink
-                  href={projects[currentView].github}
-                  label="Github"
-                />
-              </div>
-              <div className={styles.projectLink}>
-                <AnimatedLink
                   href={projects[currentView].liveDemo}
                   label="Live Site"
                 />
