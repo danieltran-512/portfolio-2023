@@ -11,9 +11,9 @@ export interface ProjectModel {
 export default function getProjects() {
   const mockProjects: ProjectModel[] = [
     {
-      title: "Green Solutions (Ongoing)",
+      title: "Green Solutions ",
       subtitle:
-        "Company team specialises in providing newest engineering HVAC heating, ventilation and air conditioning solutions for commercial building industry sector.",
+        "Website for Green Solutions using Nextjs and Wordpress Headless CMS.",
       image:
         "https://cms.greensolutions.thedevguys.co.nz/wp-content/uploads/2023/04/92A2585-scaled.jpg",
       description:
@@ -24,7 +24,7 @@ export default function getProjects() {
     {
       title: "Laminate Benchtops (Ongoing)",
       subtitle:
-        "Website for Telecom Niue, a telecommunication service provider based on the island of Niue",
+        "E-commerce site for Benchtops Direct using Nextjs and Wordpress Headless CMS",
       image:
         "https://cms.benchtops.thedevguys.co.nz/wp-content/uploads/2023/03/Rectangle-16.png",
       description:
@@ -36,7 +36,7 @@ export default function getProjects() {
     {
       title: "Telecom Niue",
       subtitle:
-        "Website for Telecom Niue, a telecommunication service provider based on the island of Niue",
+        "Website for Telecom Niue, an e-commerce telecommunication serivce using Nextjs and Wordpress",
       image:
         "https://i.guim.co.uk/img/media/d7dabe517046732b9d361567301f02a62d110c7a/0_77_5150_3089/master/5150.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9d5c860207e834d4cbe346894fbb1caf",
       description:
@@ -51,7 +51,7 @@ export default function getProjects() {
       subtitle:
         "EmployUs is a hiring app that lets employers find employees and jobseekers search for jobs with an authentication system, subscriptions, and profiles.",
       image:
-        "https://www.theladders.com/wp-content/uploads/Boss_Supports_dont_jump_Ship-1044x783.jpg",
+        "https://media.istockphoto.com/id/1299734004/photo/skillful-worker-attending-brief-meeting-in-the-factory.jpg?s=612x612&w=0&k=20&c=A4HZVtx6YbVtD0KRn4N4yI2ORFmSBT-Al8lJhzeCG9Q=",
       description:
         "EmployUs is a startup that simplifies hiring by providing an app with an authentication system for employers and jobseekers. Employers can find employees and pay for a subscription, while jobseekers create profiles and search for jobs.",
       techUsed:
@@ -76,7 +76,7 @@ export default function getProjects() {
       subtitle:
         "Web application that allows the government of Nepal to improve their teacher profiling system",
       image:
-        "https://images.techhive.com/images/article/2016/11/workforce-management_and_hiring_trends_2017-100695528-large.jpg?auto=webp&quality=85,70",
+        "https://www.quayconsulting.com.au/wp-content/uploads/2017/04/1605_WFM_News_67809289_Subscription_Monthly_M.jpg",
       description:
         "This is a Research & Development project from my final year of university for a company called CAITO. We implemented SCRUM and Agile methodologies to develop a web application that allows Nepal to conduct their teacher profiling system easier by asking the teachers to fill out the forms provided by the officers. I was the Scrum master of the team of five.",
       techUsed: "React, Firebase",
