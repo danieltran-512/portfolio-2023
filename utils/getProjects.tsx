@@ -11,7 +11,18 @@ export interface ProjectModel {
 export default function getProjects() {
   const mockProjects: ProjectModel[] = [
     {
-      title: "Green Solutions ",
+      title: "AirMaster",
+      subtitle:
+        "Website for an HVAC company using Nextjs and Wordpress Headless CMS.",
+      image:
+        "https://cms.airmaster.thedevguys.co.nz/wp-content/uploads/2023/06/Rectangle-19.png",
+      description:
+        "This project has various custom animations utilising react-spring built on top of Next.js. Headless Wordpress CMS is used to create highly flexible content",
+      techUsed: "Next.js, Headless Wordpress CMS",
+      liveDemo: "https://airmaster.thedevguys.co.nz/",
+    },
+    {
+      title: "Green Solutions",
       subtitle:
         "Website for Green Solutions using Nextjs and Wordpress Headless CMS.",
       image:
@@ -19,7 +30,7 @@ export default function getProjects() {
       description:
         "In this project, I utilised multiple animations to create a smooth and sleek portfolio for Green Solutions, a supplier of high energy efficient HVAC/heating, ventilation and air conditioning/equipment to New Zealand building industry. I challenged myself in exploring what react-spring is capable of, and was able to create more animations based on the user's behaviour, such as parallax on scroll, or dynamic navigation bar.",
       techUsed: "Next.js, Headless Wordpress CMS",
-      liveDemo: "https://greensolutions.thedevguys.co.nz/",
+      liveDemo: "https://www.green-solutions.co.nz/",
     },
     {
       title: "Laminate Benchtops (Ongoing)",
@@ -56,7 +67,7 @@ export default function getProjects() {
         "EmployUs is a startup that simplifies hiring by providing an app with an authentication system for employers and jobseekers. Employers can find employees and pay for a subscription, while jobseekers create profiles and search for jobs.",
       techUsed:
         "Next.js, WordPress (as a database and authentication), WooCommerce, Material UI",
-      liveDemo: "https://telecomniue.thedevguys.co.nz/",
+      liveDemo: "https://employusnz.co.nz/",
     },
 
     {
