@@ -26,14 +26,14 @@ export default function getProjects() {
       subtitle:
         "Website for Green Solutions using Nextjs and Wordpress Headless CMS.",
       image:
-        "https://cms.greensolutions.thedevguys.co.nz/wp-content/uploads/2023/04/92A2585-scaled.jpg",
+        "https://www.cms.green-solutions.co.nz/wp-content/uploads/2023/04/image-13.png",
       description:
         "In this project, I utilised multiple animations to create a smooth and sleek portfolio for Green Solutions, a supplier of high energy efficient HVAC/heating, ventilation and air conditioning/equipment to New Zealand building industry. I challenged myself in exploring what react-spring is capable of, and was able to create more animations based on the user's behaviour, such as parallax on scroll, or dynamic navigation bar.",
       techUsed: "Next.js, Headless Wordpress CMS",
       liveDemo: "https://www.green-solutions.co.nz/",
     },
     {
-      title: "Laminate Benchtops (Ongoing)",
+      title: "Laminate Benchtops",
       subtitle:
         "E-commerce site for Benchtops Direct using Nextjs and Wordpress Headless CMS",
       image:
@@ -62,7 +62,7 @@ export default function getProjects() {
       subtitle:
         "EmployUs is a hiring app that lets employers find employees and jobseekers search for jobs with an authentication system, subscriptions, and profiles.",
       image:
-        "https://media.istockphoto.com/id/1299734004/photo/skillful-worker-attending-brief-meeting-in-the-factory.jpg?s=612x612&w=0&k=20&c=A4HZVtx6YbVtD0KRn4N4yI2ORFmSBT-Al8lJhzeCG9Q=",
+        "https://cms.employusnz.co.nz/wp-content/uploads/2023/02/unsplash_x-ghf9LjrVg.png",
       description:
         "EmployUs is a startup that simplifies hiring by providing an app with an authentication system for employers and jobseekers. Employers can find employees and pay for a subscription, while jobseekers create profiles and search for jobs.",
       techUsed:
