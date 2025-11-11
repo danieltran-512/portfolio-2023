@@ -3,10 +3,14 @@ import IntroPage from "../components/pages/IntroPage";
 import LandingPage from "../components/pages/LandingPage";
 import { gsap } from "gsap";
 import Head from "next/head";
+import Button from "../components/Button";
 
 export default function Home() {
   const firstUpdate = useRef(true);
   const [enterSite, setEnterSite] = useState<boolean>(false);
+
+  const [passwordEntered, setPasswordEntered] = useState<boolean>(false);
+  const password = useRef<HTMLInputElement>(null);
 
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
   const overlayPath = useRef(null);
@@ -101,8 +105,39 @@ export default function Home() {
           d="M 0 100 V 100 Q 50 100 100 100 V 100 z"
         />
       </svg>
-      {!enterSite && <IntroPage setEnterSite={setEnterSite} />}
-      {enterSite && <LandingPage />}
+      {!passwordEntered && (
+        <div
+          style={{
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+            gap: "20px",
+          }}
+        >
+          Enter password
+          <input ref={password} type="password" />
+          <Button
+            label="Enter"
+            onClick={() => {
+              if (
+                password.current?.value === process.env.NEXT_PUBLIC_APP_PASSWORD
+              ) {
+                setPasswordEntered(true);
+              } else {
+                alert("Incorrect password");
+              }
+            }}
+          />
+        </div>
+      )}
+      {!enterSite && passwordEntered && (
+        <IntroPage setEnterSite={setEnterSite} />
+      )}
+      {enterSite && passwordEntered && <LandingPage />}
     </>
   );
 }
