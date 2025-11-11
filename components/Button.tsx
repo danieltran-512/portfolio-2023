@@ -1,7 +1,6 @@
-//import svg from '../assets/star.svg';
 import { motion } from "framer-motion";
 import React from "react";
-import Star from "../assets/icons/star.svg";
+import Star from "../assets/icons/Star.svg";
 import Sparkle from "../assets/icons/Sparkle.svg";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
