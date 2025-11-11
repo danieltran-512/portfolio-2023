@@ -62,6 +62,7 @@ function Work(props: Props) {
             imgWrap,
             {
               scale: 0.95,
+              filter: "grayscale(0)",
             },
             "start"
           )
@@ -69,6 +70,7 @@ function Work(props: Props) {
             imgWrap.children[0],
             {
               scale: 1.2,
+              filter: "grayscale(0)",
             },
             "start"
           );
@@ -88,6 +90,7 @@ function Work(props: Props) {
             {
               scale: 1,
               rotation: 0,
+              filter: "grayscale(1)",
             },
             "start"
           );

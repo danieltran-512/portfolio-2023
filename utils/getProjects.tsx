@@ -11,15 +11,43 @@ export interface ProjectModel {
 export default function getProjects() {
   const mockProjects: ProjectModel[] = [
     {
+      title: "Play Aotearoa",
+      subtitle: "",
+      image:
+        "https://cms.playaotearoa.org.nz/wp-content/uploads/2024/01/Image-Block-1-1.png",
+      description: "",
+      techUsed: "Next.js, Headless Wordpress CMS",
+      liveDemo: "https://playaotearoa.org.nz/",
+    },
+    {
+      title: "Think IT",
+      subtitle: "",
+      image:
+        "https://www.thinkit.co.nz/_next/image?url=https%3A%2F%2Fthinkit2.wpenginepowered.com%2Fwp-content%2Fuploads%2F2024%2F02%2FHomepage-2.png&w=640&q=75",
+      description: "",
+      techUsed: "Next.js, Headless Wordpress CMS",
+      liveDemo: "https://www.thinkit.co.nz/",
+    },
+    {
+      title: "ACT Developments UK",
+      subtitle: "",
+      image:
+        "https://cms.act-developments.co.uk/wp-content/uploads/2025/03/LR63-19-scaled.jpg",
+      description:
+        "This project has various custom animations utilising react-spring built on top of Next.js. Headless Wordpress CMS is used to create highly flexible content",
+      techUsed: "Next.js, Headless Wordpress CMS",
+      liveDemo: "https://act-developments.co.uk/",
+    },
+    {
       title: "AirMaster",
       subtitle:
         "Website for an HVAC company using Nextjs and Wordpress Headless CMS.",
       image:
-        "https://cms.airmaster.thedevguys.co.nz/wp-content/uploads/2023/06/Rectangle-19.png",
+        "https://www.airmaster.co.nz/_next/image?url=https%3A%2F%2Fwww.cms.airmaster.co.nz%2Fwp-content%2Fuploads%2F2023%2F06%2Fthumbnail_auto_x2-1.png&w=1920&q=75",
       description:
         "This project has various custom animations utilising react-spring built on top of Next.js. Headless Wordpress CMS is used to create highly flexible content",
       techUsed: "Next.js, Headless Wordpress CMS",
-      liveDemo: "https://airmaster.thedevguys.co.nz/",
+      liveDemo: "https://www.airmaster.co.nz/",
     },
     {
       title: "Green Solutions",
@@ -37,7 +65,7 @@ export default function getProjects() {
       subtitle:
         "E-commerce site for Benchtops Direct using Nextjs and Wordpress Headless CMS",
       image:
-        "https://cms.benchtops.thedevguys.co.nz/wp-content/uploads/2023/03/Rectangle-16.png",
+        "https://sjkitchens.co.nz/wp-content/uploads/best-kitchen-benchtops-sj-kitchens-hamilton.jpg",
       description:
         "In this project, I utilised Nextjs and Wordpress to develop a fullstack e-commerce web application for Laminate Benchtop specialising in customising benchtops in New Zealand. I faced a challenge when I have to create a benchtop builder form to build custom benchtop and the image changes based on the user input. It is quite an interesting experience since I had to combine a Variable Product & Simple Product in woocommerce to develop a complete customised benchtop for the user. ",
       techUsed: "Next.js, Headless Wordpress CMS, WooCommerce, Stripe",
